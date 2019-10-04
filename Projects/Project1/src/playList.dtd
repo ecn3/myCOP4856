@@ -17,3 +17,6 @@
 <!ELEMENT rottenTomatoes (#PCDATA)>
 <!ELEMENT keywords (keyword*)>
 <!ELEMENT keyword (#PCDATA)>
+<!ATTLIST keyword
+    keywordID CDATA #IMPLIED
+  >

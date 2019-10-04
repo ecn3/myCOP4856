@@ -19,8 +19,8 @@
         <metascore>63</metascore>
         <rottenTomatoes>82</rottenTomatoes>
         <keywords>
-            <keyword>harrypotter</keyword>
-            <keyword>jkrowlings</keyword>
+            <keyword keywordID="m1k1">harrypotter</keyword>
+            <keyword keywordID="m1k2">jkrowlings</keyword>
         </keywords>
     </movie>
 
@@ -37,7 +37,7 @@
         <metascore>55</metascore>
         <rottenTomatoes>82</rottenTomatoes>
         <keywords>
-            <keyword>manofsteel</keyword>
+            <keyword keywordID="m2k1">manofsteel</keyword>
         </keywords>
     </movie>
 

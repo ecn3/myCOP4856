@@ -11,22 +11,32 @@
                     </h2>
                     <p>
                         <xsl:value-of select="year"/>
+                        <br/>
                         <xsl:value-of select="runTime"/>
-                        <xsl:value-of select="productionCompany"/>
-                        <a>
-                            <xsl:value-of select="imbRef"/>
-                        </a>
-                        <xsl:value-of select="name"/>
-                        <xsl:value-of select="birthdate"/>
+                        <br/>
+                        <xsl:value-of select="productionCompany"/>     
+                    </p>
+                    <p>
+                        <a href="https://www.imdb.com/title/{imdbRef}"> IMDb</a>
+                    </p>
+                    <p>Director:<br/>
+                        <xsl:value-of select="director/name"/>
+                        <br/>
+                        <xsl:value-of select="director/birthdate"/>   
+                    </p>
+                    <p>MetaScore: 
                         <xsl:value-of select="metascore"/>
+                        <br/>Rotten Tomatoes: 
                         <xsl:value-of select="rottenTomatoes"/>
-                        <xsl:for-each select="keyword">
-                            <ul>
+                            
+                        <xsl:for-each select="keywords">
+                            <ul> 	   
                                 <li>
-                                    <xsl:value-of select="keyword"/>
+                                    <xsl:value-of select="keyword"/>				
                                 </li>
                             </ul>
                         </xsl:for-each>
+                     
                     </p>
                 </xsl:for-each>
             </body> 
