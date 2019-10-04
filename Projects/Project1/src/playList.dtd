@@ -1,62 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-
-<!--
-    TODO define vocabulary identification
-    PUBLIC ID: -//vendor//vocabulary//EN
-    SYSTEM ID: http://server/path/playList.dtd
-
--->
-
-<!--
-    An example how to use this DTD from your XML document:
-
-    <?xml version="1.0"?>
-
-    <!DOCTYPE playList SYSTEM "playList.dtd">
-
-    <playList>
-    ...
-    </playList>
--->
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT playList (movie)*>
 
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT movie (director|title|runTime|productionCompany|imdbRef|year|metascore|rottenTomatoes|keywords)*>
-
-<!--- Put your DTDDoc comment here. -->
-<!ELEMENT director (name|birthdate)*>
-
-<!--- Put your DTDDoc comment here. -->
+<!ATTLIST movie
+    movieID CDATA #IMPLIED
+  >
+<!ELEMENT director (name,birthdate)*>
 <!ELEMENT name (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT birthdate (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT title (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT runTime (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT productionCompany (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT imdbRef (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT year (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT metascore (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
 <!ELEMENT rottenTomatoes (#PCDATA)>
-
-<!--- Put your DTDDoc comment here. -->
-<!ELEMENT keywords (keyword)*>
-
-<!--- Put your DTDDoc comment here. -->
+<!ELEMENT keywords (keyword*)>
 <!ELEMENT keyword (#PCDATA)>
