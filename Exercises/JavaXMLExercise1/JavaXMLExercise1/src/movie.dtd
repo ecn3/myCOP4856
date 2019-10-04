@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT movie (director|imdbRef|year|metascore|rottenTomatoes|keywords)*>
+<!ATTLIST movie id CDATA #IMPLIED >
+
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT imdbRef (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT metascore (#PCDATA)>
+<!ELEMENT rottenTomatoes (#PCDATA)>
+<!ELEMENT keywords (keyword*)>
+<!ELEMENT keyword (#PCDATA)>

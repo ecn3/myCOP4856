@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE movie  SYSTEM "movie.dtd">
+<?xml-stylesheet type="text/css" href="movie.css"?>
+<!-- This XML document describes a movie  -->
+<movie>
+   <director>Chris Columbus</director>
+   <imdbRef>tt0295297</imdbRef>
+   <year>2002</year>
+   <metascore>63</metascore>
+   <rottenTomatoes>82</rottenTomatoes>
+   <keywords>
+      <keyword>harrypotter</keyword>
+      <keyword>jkrowlings</keyword>
+      <keyword>hogwarts</keyword>
+   </keywords>
+</movie>
