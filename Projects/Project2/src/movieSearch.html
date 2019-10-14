@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Movie Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            div.box {
+                position: absolute;
+                top: 0%;
+                left: 25%;
+                margin-top: -50px;
+                margin-left: -50px;
+                height: 100px;
+                width: 400px;
+                border: 5px solid black;
+                padding: 30px;
+                margin: 0px;
+                text-align:center;
+                color: white;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <form action="/action_page.php">
+                <h1 style="text-align:center">Movie Search</h1><br> 
+                Enter Keyword: 
+                <input type="text" name="keyword">
+                <input type="submit" value="Submit Query">
+            </form>  
+        </div>
+    </body>
+</html>

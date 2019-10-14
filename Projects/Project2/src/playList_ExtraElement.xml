@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE playList  SYSTEM "playList.dtd">
+<?xml-stylesheet type="text/css" href="playList.css"?>
+<!-- This XML document describes a playlist of movies -->
+<playList>
+    
+    <movie movieID="m1">
+        <director>
+            <name>Chris Columbus</name>
+            <birthdate>9/10/1958</birthdate>
+        </director>
+        <title>Harry Potter and the Chamber of Secrets</title>
+        <runTime>161</runTime>
+        <productionCompany>Warner Bros.</productionCompany>
+        <imdbRef>tt0295297</imdbRef>
+        <year>2002</year>
+        <metascore>63</metascore>
+        <rottenTomatoes>82</rottenTomatoes>
+    </movie>
+
+    <movie movieID="m2">
+        <director>
+            <name>Zack Snyder</name>
+            <birthdate>03/01/1966</birthdate>
+        </director>
+        <title>Man of Steel </title>
+        <runTime>143</runTime>
+        <productionCompany>Warner Bros.</productionCompany>
+        <imdbRef>tt0770828</imdbRef>
+        <year>2013</year>
+        <metascore>55</metascore>
+        <rottenTomatoes>82</rottenTomatoes>
+        <keywords>
+            <keyword keywordID="m2k1">manofsteel</keyword>
+        </keywords>
+    </movie>
+
+    <movie movieID="m3">
+        <director>
+            <name>Matt Reeves</name>
+            <birthdate>04/27/1966</birthdate>
+        </director>
+        <title>Untitled Batman Reboot</title>
+        <star>Robert Pattinson</star>
+        <runTime></runTime>
+        <productionCompany>Warner Bros.</productionCompany>
+        <imdbRef>tt1877830</imdbRef>
+        <year>2021</year>
+        <metascore>n/a</metascore>
+        <rottenTomatoes>n/a</rottenTomatoes>
+    </movie>
+
+</playList>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT playList (movie)*>
+
+<!ELEMENT movie (director|title|runTime|productionCompany|imdbRef|year|metascore|rottenTomatoes|keywords)*>
+<!ATTLIST movie
+    movieID CDATA #IMPLIED
+  >
+<!ELEMENT director (name,birthdate)*>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT birthdate (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT runTime (#PCDATA)>
+<!ELEMENT productionCompany (#PCDATA)>
+<!ELEMENT imdbRef (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT metascore (#PCDATA)>
+<!ELEMENT rottenTomatoes (#PCDATA)>
+<!ELEMENT keywords (keyword*)>
+<!ELEMENT keyword (#PCDATA)>
+<!ATTLIST keyword
+    keywordID CDATA #IMPLIED
+  >
