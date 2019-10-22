@@ -1,29 +1,10 @@
 <!DOCTYPE html>
-<!--
-   To change this license header, choose License Headers in Project Properties.
-   To change this template file, choose Tools | Templates
-   and open the template in the editor.
-   -->
 <html>
    <head>
       <title>Movie Search</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-      <style>
-         div.box {
-         position: absolute;
-         top: 0%;
-         left: 30%;
-         margin-top: -50px;
-         height: 100px;
-         width: 400px;
-         border: 5px solid black;
-         padding: 30px;
-         margin: 0px;
-         color: white;
-         background-color: black;
-         }
-      </style>
+	  <link rel="stylesheet" href="styles.css">
    </head>
    <body>
       <div class="box">
@@ -80,7 +61,12 @@
          $('#director').html("Director: "+director);
          $('#productionCompany').html("Company: "+productionCompany);
          $('#year').html("Year: "+year);
-         } 
+         } else{
+		 $('#main').html("No movie found");
+		 $('#director').html("");
+         $('#productionCompany').html("");
+         $('#year').html("");
+		 }
                              },
                      error: function (xhr, status, error) {
                          var errorMessage = xhr.status + ': ' + xhr.statusText;
