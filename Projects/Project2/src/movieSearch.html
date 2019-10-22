@@ -34,12 +34,12 @@
             <input type="button" onclick="submitKey(keyword);" value="Submit Query"/>   
          </form>
       </div>
-      <div class="results">
+      <section>
          <div id="main"> </div>
          <div id="director"> </div>
-         <div id="company"> </div>
+         <div id="productionCompany"> </div>
          <div id="year"> </div>
-      </div>
+      </section>
       <script>
          function submitKey() {  
               $(document).ready(function () {
@@ -54,31 +54,31 @@
                                  var movie = $(xml).find('movie')[0];
                                  var title = $(movie).find('title').text();
                                  var director = $(movie).find('director').find('name').text();
-                                 var company = $(movie).find('company').text();
+                                 var productionCompany = $(movie).find('productionCompany').text();
                                  var year = $(movie).find('year').text();
                                  $('#main').html("Movie: "+title);
          $('#director').html("Director: "+director);
-         $('#company').html("Company: "+company);
+         $('#productionCompany').html("Company: "+productionCompany);
          $('#year').html("Year: "+year);
          } else if(keyword == "manofsteel"){
                                  var movie = $(xml).find('movie')[1];
                                  var title = $(movie).find('title').text();
                                  var director = $(movie).find('director').find('name').text();
-                                 var company = $(movie).find('company').text();
+                                 var productionCompany = $(movie).find('productionCompany').text();
                                  var year = $(movie).find('year').text();
                                  $('#main').html("Movie: "+title);
          $('#director').html("Director: "+director);
-         $('#company').html("Company: "+company);
+         $('#productionCompany').html("productionCompany: "+productionCompany);
          $('#year').html("Year: "+year);
          }  else if(keyword == "batman"){
                                  var movie = $(xml).find('movie')[2];
                                  var title = $(movie).find('title').text();
                                  var director = $(movie).find('director').find('name').text();
-                                 var company = $(movie).find('company').text();
+                                 var productionCompany = $(movie).find('productionCompany').text();
                                  var year = $(movie).find('year').text();
                                  $('#main').html("Movie: "+title);
          $('#director').html("Director: "+director);
-         $('#company').html("Company: "+company);
+         $('#productionCompany').html("Company: "+productionCompany);
          $('#year').html("Year: "+year);
          } 
                              },
