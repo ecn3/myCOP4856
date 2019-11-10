@@ -1,0 +1,4 @@
+LOAD XML
+INFILE "movie1.xml"
+INTO TABLE ex2.movie
+ROWS IDENTIFIED BY '<movie>';
