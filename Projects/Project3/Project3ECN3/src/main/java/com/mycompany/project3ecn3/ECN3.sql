@@ -7,6 +7,7 @@ CREATE TABLE PlaylistECN3 (
    directoBirthdate DATE,
    title VARCHAR(10) NOT NULL,
    runTime INT,
+   productionCompany VARCHAR(20),
    imdbRef VARCHAR(10) NOT NULL,
    releaseyear INT NOT NULL,
    metascore INT,
@@ -20,4 +21,11 @@ CREATE TABLE PlaylistECN3 (
 );
 
 
-/*INSERT INTO PlaylistECN3 VALUES ();*/
+INSERT INTO PlaylistECN3 VALUES ("Chris Columbus", TO_DATE('9/10/1958', 'MM/DD/YYYY'),"Harry Potter and the Chamber of Secrets",
+161,"Warner Bros.","tt0295297", 2002, 63, 82, "harrypotter", "jkrowlings");
+
+INSERT INTO PlaylistECN3 VALUES ("Zack Snyder", TO_DATE('3/1/1966', 'MM/DD/YYYY'),"Man of Steel",
+143,"Warner Bros.","tt0770828", 2013, 55, 82, "manofsteel", "superman" );
+
+INSERT INTO PlaylistECN3 VALUES ("Matt Reeves", TO_DATE('04/27/1966', 'MM/DD/YYYY'),"Untitled Batman Reboot",
+Null,"Warner Bros.","tt1877830", 2021, Null, Null);
