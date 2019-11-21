@@ -1,5 +1,8 @@
 package dsa1.jdbc;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -11,25 +14,23 @@ import java.sql.SQLException;
  * @author Bernd OK
  */
 public class SearchMovie {
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, SQLException {
         Statement stmt = null;
         ResultSet rs = null;
         Connection conn = null;
         final String driverName = "com.mysql.cj.jdbc.Driver";
         final String dbURL = "jdbc:mysql://localhost:3306/ECN3?serverTimezone=UTC&user=root";
-        //final String dbURL = "jdbc:mysql://mysql.cs.uwf.edu/bowsnickiklewe?user=bowsnickiklewe&amp;password=KApuCR2s";
-
-        // OK! Here we go. All in a big try - we'll check the exceptions later
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String sql = "";
+        while(!sql.contains("end")){
+        System.out.print("Enter in a keyword to search: ");    
+        String keyword = reader.readLine();
+        sql = "SELECT * from PlaylistECN3 WHERE Keyword1 = \"" + keyword+ "\"" + " OR "+"Keyword2 = \"" + keyword+ "\""+ " OR "+"Keyword3 = \"" + keyword+ "\"";
         try {
             Class.forName(driverName);
             conn = DriverManager.getConnection(dbURL);
             stmt = conn.createStatement();
-            // If we got that far... the rest is just a piece of cake (I guess)
-            // 1. List all Moive
-            rs = stmt.executeQuery("SELECT * from PlaylistECN3");
+            rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 System.out.print(rs.getString(1));
                 System.out.print(" " + rs.getString(2));
@@ -56,4 +57,5 @@ public class SearchMovie {
             }
         }
     }
+} 
 }
